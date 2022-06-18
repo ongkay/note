@@ -30,6 +30,8 @@
 
 
 
+
+
 # note
 semua yang saya pelajari akan di catat disini agar **tidak** lupa.
 	~~Tulisan Coret~~
@@ -92,6 +94,11 @@ This site was built using [GitHub Pages](https://pages.github.com/).
 ### Buat Link dalam 1 halaman
 [Apa Judulnya](#task-lists)
 [Apa Judulnya](#mau-diarahkan-ke-mana)
+
+* Tidak akan ditampilkan didepan
+
+[rahasia]: http://linknya.com
+[ini adalah link tersembunyi tidak akan ditampilkan di luar]: http://slashdot.org
 
 
 ---
