@@ -1,5 +1,6 @@
 # note
-semua yang saya pelajari akan di catat disini agar tidak lupa
+semua yang saya pelajari akan di catat disini agar **tidak** lupa.
+	~~This was mistaken text~~
 
 - [x] #739
 - [ ] https://github.com/octo-org/octo-repo/issues/740
