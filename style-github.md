@@ -128,32 +128,26 @@ menggunakan Format `[judulnya](linknya)`
 
 # Foto dan Video
 
-1. untuk menambahkan foto cukup dengan format `![IMAGE ALT TEXT HERE](LINK FOTO HERE)`
-contoh :
+1. untuk menambahkan foto cukup dengan format : 
 ~~~
-![This is an image](https://myoctocat.com/assets/images/base-octocat.svg)
+![IMAGE ALT TEXT HERE](LINK FOTO HERE)
 ~~~
 
 2. Sisipkan video dari yaoube dengan format :
 ~~~
 [![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](http://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)
 ~~~
+
 contoh :
 ~~~
+![This is an image](https://myoctocat.com/assets/images/base-octocat.svg)
 [![Video dari youtube](http://img.youtube.com/vi/o3m15BWi2HM/0.jpg)](http://www.youtube.com/watch?v=o3m15BWi2HM)
 ~~~
 
+# Blockquotes
+> tambahkan `>` di depan makan akan jadi blockquotes
+> Maka hasilnya seperti inilah
+> ya seperti ini
 
-
-
-
-**Output :**
-> ![image]()
-
-**Output :**
-> ![image]()
-
-**Output :**
-> ![image]()
 
 [Go To TOP](#headers)
