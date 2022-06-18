@@ -2,9 +2,7 @@
 semua yang saya pelajari akan di catat disini agar **tidak** lupa.
 	~~Tulisan Coret~~
 
-- [x] #739
-- [ ] https://github.com/octo-org/octo-repo/issues/740
-- [ ] Add delight to the experience when all tasks are complete :tada:
+
 
 ***Tulisan tebal dan miring***
 ~~Tulisan Coret~~
@@ -25,6 +23,8 @@ semua yang saya pelajari akan di catat disini agar **tidak** lupa.
 <sub>This is a subscript text</sub>
 
 <sup>This is a superscript text</sup>
+
+`hightlight`
 
 ---
 # Buat Format Kode :
@@ -48,19 +48,26 @@ This site was built using [GitHub Pages](https://pages.github.com/).
 - John Adams
 - Thomas Jefferson
 
+
 1. James Madison
 2. James Monroe
 3. John Quincy Adams
 
 
+
 1. First list item
    - First nested list item
-     - Second nested list item
+     - Second nested list item (enter + space 2x)
 
+---
+# Task lists
+- [x] #739
+- [ ] https://github.com/octo-org/octo-repo/issues/740
+- [ ] Add delight to the experience when all tasks are complete :tada:
 
-+ `string`
-+ `number`
-+ `boolean`
+      
+---
+
 
 
 
