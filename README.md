@@ -1,3 +1,17 @@
+[Types](#note)
+
+
+
+
+
+
+
+
+
+
+
+
+
 # note
 semua yang saya pelajari akan di catat disini agar **tidak** lupa.
 	~~Tulisan Coret~~
@@ -54,8 +68,13 @@ But let's throw in a <b>tag</b>.
 # LINK
 This site was built using [GitHub Pages](https://pages.github.com/).
 
-#Tambahkan Foto
+### Tambahkan Foto
 ![This is an image](https://myoctocat.com/assets/images/base-octocat.svg)
+
+### Buat Link dalam 1 halaman
+[Apa Judulnya](#task-lists)
+[Apa Judulnya](#mau-diarahkan-ke-mana)
+
 
 ---
 # LIST
