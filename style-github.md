@@ -1,4 +1,4 @@
-
+\
 # Headers
 ~~~
 # H1
@@ -17,11 +17,21 @@ Alt-H2
 ------
 ~~~
 
-
-
 **Output :**
 > ![image](https://i.imgur.com/UyH77Dc.png)
 
+
+#Styling text
+  
+| Style                       | Syntax                    | Output                                |
+| ----------------------------|:-------------------------:| -------------------------------------:|
+| Bold                        | ** ** or __ __            | **This is bold text**                 |
+| Italic                      | * * or _ _                | _This text is italicized_|
+| Strikethrough | ~~ ~~   | ~\~\This was mistaken text\~\~  | ~~This was mistaken text~~  |
+| All bold and italic   | *** ***    | ***All this text is important***    |
+| | | | |
+| | | | |
+| | | | |
 
 
 
