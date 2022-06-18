@@ -101,12 +101,32 @@ ___
 > ![image](https://i.imgur.com/3BWRBbf.png)
 
 
+# LINK
+menggunakan Format `[judulnya][linknya]`
+~~~
+[Langsung diarahkan ke-Linknya](https://www.google.com)
+
+[Klik link anchor ke Judul di satu halaman doc](#garis)
+
+//Bisa dibuat dengan refresi
+
+  [Melalui refrensinya dibawah][ini Adalah Reffrensinya]
+  
+  [Atau bisa buat refresinya dibawah dengan nomor begini][1]
+
+// ini refrensinya (tidak akan di print)
+
+  [ini Adalah Reffrensinya]: https://www.mozilla.org
+  [1]: http://slashdot.org
+  [link text itself]: http://www.reddit.com
+~~~
+
+**Output :**
+> ![image](https://i.imgur.com/llyTU8q.png)
 
 
 **Output :**
 > ![image]()
 
-**Output :**
-> ![image]()
-
-
+### Tambahkan Foto
+![This is an image](https://myoctocat.com/assets/images/base-octocat.svg)
