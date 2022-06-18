@@ -53,8 +53,38 @@ Alt-H2
 **Output :**
 > ![image](https://i.imgur.com/hHELbRq.png)
   
-  
-  
+# List
+~~~
+// list dengan urutan no
+1. Bisa menggunakan anka urutan `1, 2, 3, ...`
+2. And more
 
+// List suka-suka
+- Bisa menggunakan tanda `-`
++ Bisa juga menggunakan tanda `+`
+* Bisa juga menggunakan tanda `*`
+
+// List dengan sub list
+1. First list item
+   - First nested list item
+     - Second nested list item (enter + space 2x) 
+~~~
+
+**Output :**
+> ![image](https://i.imgur.com/H5Zuug0.png)
+
+
+
+**Output :**
+> ![image]()
+
+**Output :**
+> ![image]()
+
+**Output :**
+> ![image]()
+
+**Output :**
+> ![image]()
 
 
