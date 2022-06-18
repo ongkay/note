@@ -102,7 +102,7 @@ ___
 
 
 # LINK
-menggunakan Format `[judulnya][linknya]`
+menggunakan Format `[judulnya](linknya)`
 ~~~
 [Langsung diarahkan ke-Linknya](https://www.google.com)
 
@@ -125,12 +125,35 @@ menggunakan Format `[judulnya][linknya]`
 > ![image](https://i.imgur.com/llyTU8q.png)
 
 
+
+# Foto dan Video
+
+1. untuk menambahkan foto cukup dengan format `![IMAGE ALT TEXT HERE](LINK FOTO HERE)`
+contoh :
+~~~
+![This is an image](https://myoctocat.com/assets/images/base-octocat.svg)
+~~~
+
+2. Sisipkan video dari yaoube dengan format :
+~~~
+[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](http://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)
+~~~
+contoh :
+~~~
+[![Video dari youtube](http://img.youtube.com/vi/o3m15BWi2HM/0.jpg)](http://www.youtube.com/watch?v=o3m15BWi2HM)
+~~~
+
+
+
+
+
 **Output :**
 > ![image]()
 
-### Tambahkan Foto
-![This is an image](https://myoctocat.com/assets/images/base-octocat.svg)
+**Output :**
+> ![image]()
 
+**Output :**
+> ![image]()
 
-
-[Go TOP][#headers]
+[Go To TOP](#headers)
