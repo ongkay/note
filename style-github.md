@@ -130,3 +130,7 @@ menggunakan Format `[judulnya][linknya]`
 
 ### Tambahkan Foto
 ![This is an image](https://myoctocat.com/assets/images/base-octocat.svg)
+
+
+
+[Go TOP][#headers]
