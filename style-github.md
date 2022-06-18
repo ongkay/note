@@ -34,7 +34,27 @@ Alt-H2
 | Highlight                   | \` \`                     | `hightlight`                          |
 
 
+# Buat Table
+~~~
+// Cara Ke-1
+  | Tables        | Are           | Cool  |
+  | ------------- |:-------------:| -----:|
+  | col 3 is      | right-aligned | $1600 |
+  | col 2 is      | centered      |   $12 |
+  | zebra stripes | are neat      |    $1 |
 
+// Cara Ke-2
+  Markdown | Less | Pretty
+  --- | --- | ---
+  *Still* | `renders` | **nicely**
+  1 | 2 | 3
+~~~
+  
+**Output :**
+> ![image](https://i.imgur.com/hHELbRq.png)
+  
+  
+  
 
 
 
