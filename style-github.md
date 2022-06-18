@@ -27,11 +27,11 @@ Alt-H2
 | ----------------------------|:-------------------------:| -------------------------------------:|
 | Bold                        | ** ** or __ __            | **This is bold text**                 |
 | Italic                      | * * or _ _                | _This text is italicized_|
-| Strikethrough | ~~ ~~   | ~\~\This was mistaken text\~\~  | ~~This was mistaken text~~  |
-| All bold and italic   | *** ***    | ***All this text is important***    |
-| | | | |
-| | | | |
-| | | | |
+| Strikethrough               | ~~ ~~                     | ~~This was mistaken text~~  |
+| All bold and italic         | *** ***                   | ***All this text is important***    |
+| Subscript                   | \<sub> \</sub>           | <sub>This is a subscript text</sub>   |
+| Superscript                 | \<sup> \</sup>              | <sup>This is a superscript text</sup>   |
+
 
 
 
