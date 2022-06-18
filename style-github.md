@@ -21,17 +21,17 @@ Alt-H2
 > ![image](https://i.imgur.com/UyH77Dc.png)
 
 
-#Styling text
+# Styling text
   
 | Style                       | Syntax                    | Output                                |
 | ----------------------------|:-------------------------:| -------------------------------------:|
 | Bold                        | ** ** or __ __            | **This is bold text**                 |
-| Italic                      | * * or _ _                | _This text is italicized_|
-| Strikethrough               | ~~ ~~                     | ~~This was mistaken text~~  |
-| All bold and italic         | *** ***                   | ***All this text is important***    |
-| Subscript                   | \<sub> \</sub>           | <sub>This is a subscript text</sub>   |
-| Superscript                 | \<sup> \</sup>              | <sup>This is a superscript text</sup>   |
-
+| Italic                      | * * or _ _                | _This text is italicized_             |
+| Strikethrough               | ~~ ~~                     | ~~This was mistaken text~~            |
+| All bold and italic         | *** ***                   | ***All this text is important***      |
+| Subscript                   | \<sub> \</sub>            | <sub>This is a subscript text</sub>   |
+| Superscript                 | \<sup> \</sup>            | <sup>This is a superscript text</sup> |
+| Highlight                   | \` \`                     | `hightlight`                          |
 
 
 
