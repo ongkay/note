@@ -84,9 +84,24 @@ Alt-H2
 
 
 
+# Garis
+~~~
+// Hyphens
+
+---
+
+// Asterisks
+***
+
+// Underscores
+___
+~~~
 
 **Output :**
-> ![image]()
+> ![image](https://i.imgur.com/3BWRBbf.png)
+
+
+
 
 **Output :**
 > ![image]()
