@@ -52,11 +52,11 @@ $ne | Membandingkan value tidak sama dengan value lain
 
 Syntax :
 ~~~ javascript
-    db.customers.find({
-        field: {
-            $operator: "value"
-        }
-    });
+db.customers.find({
+    field: {
+        $operator: "value"
+    }
+});
 ~~~
 
 contoh : 
@@ -65,7 +65,7 @@ contoh :
  * ada 2 cara dibawah ini :
  * SQL : select * from customers where _id = 'khannedy'
  */
-    db.customers.find({
+db.customers.find({
     _id: {
         $eq: "khannedy"
     }
@@ -126,12 +126,12 @@ db.products.find({
 
 
 # Logical Query Operator
-    Operator | Keterangan
-    --- | ---
-    $and   | Menggabungkan query dengan operasi AND, mengembalikan document jika semua kondisi benar
-    $or   | Menggabungkan query dengan operasi OR, mengembalikan document jika salah satu kondisi benar
-    $nor   | Menggabungkan query dengan operasi NOR, mengembalikan document yang gagal di semua kondis
-    $not    | Membalikkan kondisi, mengembalikan document yang tidak sesuai kondisi.
+Operator | Keterangan
+--- | ---
+$and | Menggabungkan query dengan operasi AND, mengembalikan document jika semua kondisi benar
+$or | Menggabungkan query dengan operasi OR, mengembalikan document jika salah satu kondisi benar
+$nor | Menggabungkan query dengan operasi NOR, mengembalikan document yang gagal di semua kondis
+$not | Membalikkan kondisi, mengembalikan document yang tidak sesuai kondisi
 
 
 Syntax Logical Operator untuk `$and` `$or`, `$nor`
@@ -265,4 +265,94 @@ db.products.find({
     }
 });
 ~~~
+
+# Evaluation Query Operator
+Operator | Keterangan
+--- | ---
+$expr | Menggunakan aggregation operation
+$jsonSchema | Validasi document sesuai dengan JSON schema
+$mod | Melakukan operasi modulo 
+$regex | Mengambil document sesuai dengan regular expression (PCRE)
+$text | Melakukan pencarian menggunakan text
+$where | Mengambil document dengan JavaScript Function
+
+- `$expr` : Menggunakan aggregation operation
+   - Syntax `$expr` :
+        ~~~ javascript
+        db.products.find({
+            $expr: {
+                // aggretion expression
+            }
+        });
+        ~~~
+
+    - Contoh menggunakan `$expr` :
+        ~~~ javascript
+        /**Mencari produk yang field price diatas 1000000
+         * SQL : select * from products where price > 1000000
+        */
+
+        db.products.find({
+            $expr: {
+                $gt: ["$price", 1000000]
+            }
+        });
+
+        /** mencari produk dengan uppercasin dulu field _id
+         * SQL : select * from customers where toUpper(_id) = 'KHANNEDY'
+        **/
+        db.customers.find({
+            $expr: {
+                $eq: [
+                    { $toUpper: "$_id" }, 
+                    "KHANNEDY"
+                ]
+            }
+        });
+        ~~~
+        
+
+    - lebih detail lagi bisa cek di :
+        https://docs.mongodb.com/manual/reference/operator/query/expr/
+        https://docs.mongodb.com/manual/meta/aggregation-quick-reference/#aggregation-expressions
+
+
+- Syntax dan contoh menggunakan `$jsonSchema`
+     ~~~ javascript
+    //Syntax
+        db.products.find({
+            $jsonSchema: {
+                // JSON Schema Object
+            }
+        });
+
+
+    //Contoh : 
+        //mengambil produk yang wajib ada field 'name' dan 'catagory'
+        // select * from products where name is not null and category is not null
+        db.products.find({
+            $jsonSchema: {
+                required: [ "name", "category"]
+            }
+        });
+
+        //contoh lebih detail lagi
+        // select * from products where name is not null and type(name) = 'string' and type(price) = 'long'
+        db.products.find({
+            $jsonSchema: {
+                required: [ "name"],
+                properties: {
+                    name: {
+                        bsonType: "string"
+                    },
+                    price: {
+                        bsonType: "long"
+                    }
+                }
+            }
+        });
+    ~~~
+
+
+
 
