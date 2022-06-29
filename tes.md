@@ -53,6 +53,8 @@ Operator | Keterangan
 `$nin` | Membandingkan value tidak ada dalam value yang ada di array
 `$ne` | Membandingkan value tidak sama dengan value lain
 
+Info lebih detail : https://docs.mongodb.com/manual/reference/operator/query-comparison/
+
 + Syntax :
     ~~~ javascript
     db.customers.find({
@@ -138,6 +140,7 @@ Operator | Keterangan
 `$nor` | Menggabungkan query dengan operasi NOR, mengembalikan document yang gagal di semua kondis
 `$not` | Membalikkan kondisi, mengembalikan document yang tidak sesuai kondisi
 
+info lebih detail : https://docs.mongodb.com/manual/reference/operator/query-logical/
 
 + Syntax Logical Operator untuk `$and` `$or`, `$nor`
     ~~~ javascript
@@ -228,6 +231,8 @@ Operator | Keterangan
   | `$exists`         | Mencocokkan document yang memiliki field tersebut           |
   | `$type`           | Mencocokkan document yang memiliki type field tersebut      | 
 
+Lebih lengkap lagi cek : https://docs.mongodb.com/manual/reference/operator/query-element/
+
 + Syntax Element Query Operator
     ~~~ javascript
     db.collection.find({
@@ -283,7 +288,7 @@ Operator | Keterangan
         }
     });
     ~~~
-Lebih lengkap lagi cek : https://docs.mongodb.com/manual/reference/operator/query-element/
+
 
 
 # Evaluation Query Operator
