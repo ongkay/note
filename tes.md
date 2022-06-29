@@ -267,16 +267,18 @@ db.products.find({
 ~~~
 
 # Evaluation Query Operator
+[![Video dari youtube](http://img.youtube.com/vi/MyM_Qa4mCGM/0.jpg)](http://www.youtube.com/watch?v=MyM_Qa4mCGM)
+
 Operator | Keterangan
 --- | ---
-$expr | Menggunakan aggregation operation
-$jsonSchema | Validasi document sesuai dengan JSON schema
-$mod | Melakukan operasi modulo 
-$regex | Mengambil document sesuai dengan regular expression (PCRE)
-$text | Melakukan pencarian menggunakan text
-$where | Mengambil document dengan JavaScript Function
+`$expr` | Menggunakan aggregation operation
+`$jsonSchema` | Validasi document sesuai dengan JSON schema
+`$mod` | Melakukan operasi modulo 
+`$regex` | Mengambil document sesuai dengan regular expression (PCRE)
+`$text` | Melakukan pencarian menggunakan text
+`$where` | Mengambil document dengan JavaScript Function
 
-- `$expr` : Menggunakan aggregation operation
++ `$expr` : Menggunakan aggregation operation
    - Syntax `$expr` :
         ~~~ javascript
         db.products.find({
@@ -312,22 +314,23 @@ $where | Mengambil document dengan JavaScript Function
         ~~~
         
 
-    - lebih detail lagi bisa cek di :
+    - lebih detail lagi cek di :
         https://docs.mongodb.com/manual/reference/operator/query/expr/
         https://docs.mongodb.com/manual/meta/aggregation-quick-reference/#aggregation-expressions
 
 
-- Syntax dan contoh menggunakan `$jsonSchema`
-     ~~~ javascript
-    //Syntax
++ `$jsonSchema` : Validasi document sesuai dengan JSON schema
+    - Syntax `$jsonSchema` :
+        ~~~ javascript
         db.products.find({
             $jsonSchema: {
                 // JSON Schema Object
             }
         });
+        ~~~
 
-
-    //Contoh : 
+    - Contoh menggunakan `$jsonSchema` :
+        ~~~ javascript
         //mengambil produk yang wajib ada field 'name' dan 'catagory'
         // select * from products where name is not null and category is not null
         db.products.find({
@@ -351,8 +354,162 @@ $where | Mengambil document dengan JavaScript Function
                 }
             }
         });
-    ~~~
+        ~~~
+
+    - lebih detail lagi cek di :
+        http://json-schema.org/
+        https://docs.mongodb.com/manual/reference/operator/query/jsonSchema/
+
+
++ `$mod` : Melakukan operasi modulo 
+    - Syntax `$mod` :
+        ~~~ javascript
+        db.products.find({ 
+            field: { 
+                $mod: [ devisor, reminder]
+            } 
+        });
+        ~~~
+
+    - Contoh menggunakan `$mod` :
+        ~~~ javascript
+        /**mencari produk dengan harga yg habis di bagi 5
+        * select * from products where price % 5 = 0
+        **/
+        db.products.find({ 
+            price: { 
+                $mod: [5, 0]
+            } 
+        });
+        ~~~
+
+    - lebih detail lagi cek di :
+        https://docs.mongodb.com/manual/reference/operator/query/mod/
+
++ `$regex` : Mengambil document sesuai dengan regular expression (PCRE)
+    - Syntax `$regex` :
+        ~~~ javascript
+        db.products.find({
+            field: {
+                $regex: /regex/,
+                $options: "<option>"
+            }
+        });
+        ~~~
+
+    - Contoh menggunakan `$regex` :
+        ~~~ javascript
+        /**Mencari produk yang mengandung kata 'mie
+         * SQL : select * from products where name like "%mie%"
+        */
+        db.products.find({
+            name: {
+                $regex: /mie/,
+                $options: "i"
+            }
+        });
+
+        /**Mencari produk dengan katakunci yang diawali dengan 'Mie'
+        * SQL : select * from products where name like "Mie%"
+        */
+        db.products.find({
+            name: {
+                $regex: /^Mie/
+            }
+        });
+        ~~~
+
+    - lebih detail lagi cek di :
+        https://regexr.com/
+        https://docs.mongodb.com/manual/reference/operator/query/regex/
+
++ `$text` : Melakukan pencarian menggunakan text
+    - Syntax `$text` :
+        ~~~ javascript
+        db.products.find({
+            $text: {
+                $search: "string",
+                $language: "string", //opsional
+                $caseSensitive: "boolean", //opsional
+                $diacriticSensitive: "boolean" //opsional
+            }
+        });
+        ~~~
+
+    - Contoh menggunakan `$text` :
+        ~~~ javascript
+        /**Mencari Produk dengan Index
+         * SQL : create text index on products
+        **/
+        db.products.createIndex({
+            name: "text",
+            catagory: "text"
+        });
+
+        //dengan membuat index di atas, maka pencarian hanya didalam field 'name' dan 'catagory'
+
+        /**Mencari produk dengan katakunci yang mengandung kata 'mie' ATAU 'sedap' 
+        * di field index diatas
+        * SQL : select * from products where (name like "%mie%" or name like "%sedap%")
+        */
+        db.products.find({
+            $text: {
+                $search: "mie sedap" //==> mie atau sedap
+            }
+        });
+
+        /**Mencari produk dengan katakunci yang mengandung kata 'mie' DAN 'sedap' 
+        * di field index diatas
+        * SQL : select * from products where name like "%mie sedap%"
+        */
+        db.products.find({
+            $text: {
+                $search: '"mie sedap"' //==> mie dan sedap
+            }
+        });
+        ~~~
+
+    - lebih detail lagi cek di :
+        https://docs.mongodb.com/manual/reference/operator/query/text/
+
++ `$where` : Mengambil document dengan JavaScript Function
+    - Syntax `$jsonSchema` :
+        ~~~ javascript
+        db.collection.find({
+            $where: function(){
+                return "apa";
+            }
+        });
+        ~~~
+
+    - Contoh menggunakan `$jsonSchema` :
+        ~~~ javascript
+        /**Mencari ID menggunakan functions
+         * SQL : select * fro customers where _id = "khannedy"
+        **/
+        db.customers.find({
+            $where: function(){
+                return this._id == "khannedy";
+            }
+        });
+        ~~~
+
+    - lebih detail lagi cek di :
+        https://docs.mongodb.com/manual/reference/operator/query/where/
+
++ `$jsonSchema` : apa
+    - Syntax `$jsonSchema` :
+        ~~~ javascript
+
+        ~~~
+
+    - Contoh menggunakan `$jsonSchema` :
+        ~~~ javascript
+        
+        ~~~
+
+    - lebih detail lagi cek di :
 
 
 
-
+ 
